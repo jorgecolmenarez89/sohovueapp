@@ -1,28 +1,47 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Navbar />
+    <Inicio />
+    <Publicidad />
+    <Nosotros />
+    <Servicios />
+    <section class="destacados">
+        <button class="btn btn-verde py-3 px-5">
+          HABLANOS DE TU PROYECTO
+        </button>
+    </section>
+    <Footer />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  //importacion de componentes y secciones a utilizar
+  import Navbar from './components/Navbar.vue';
+  import Publicidad from './components/Publicidad.vue';
+  import Inicio from './pages/Inicio.vue';
+  import Nosotros from './pages/Nosotros';
+  import Servicios from './pages/Servicos';
+  import Footer from './components/Footer';
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default {
+    name: 'App',
+    components: {
+      Navbar,
+      Inicio,
+      Publicidad,
+      Nosotros,
+      Servicios,
+      Footer
+    }
   }
-}
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+  .destacados{
+    display: flex;
+    padding: 5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 </style>
